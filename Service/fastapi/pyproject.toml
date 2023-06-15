@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "gqw"
+version = "0.1.0"
+description = ""
+authors = ["sakost <23290721+sakost@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.97.0"
+uvicorn = "^0.22.0"
+python-multipart = "^0.0.6"
+
+
+[tool.poetry.group.models.dependencies]
+joblib = "^1.2.0"
+matplotlib = "^3.7.1"
+pandas = "^2.0.2"
+lightgbm = "^3.3.5"
+catboost = "^1.2"
+torch = "^2.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

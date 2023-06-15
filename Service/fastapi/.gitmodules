@@ -1,0 +1,3 @@
+[submodule "Master-s_work"]
+	path = master_s_work
+	url = git@github.com:SergeyKulakin/Master-s_work.git
