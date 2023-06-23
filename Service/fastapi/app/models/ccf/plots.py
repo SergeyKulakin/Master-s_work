@@ -18,7 +18,7 @@ def make_hists(df: pd.DataFrame, limit: int = 100) -> plt.Figure:
 
 def make_count_frauds(df: pd.DataFrame) -> plt.Figure:
     df["day"] = (df["Time"] / 60 / 24).astype(int)
-    n = df.loc[:, ['day', 'Class']].groupby('day')['Class'].sum()
+    n = df.loc[:, ['day', 'Fraud']].groupby('day')['Fraud'].sum()
     fig, ax = plt.subplots()
     ax.plot(n)
     ax.set_title('График количества fraud в зависимости от дня')
