@@ -110,7 +110,7 @@ def load_model(path_to_model: Path) -> None:
 
 def run_model(df: pd.DataFrame, threshold: float = 0.48) -> list[int]:
     dataset = TensorDataset(torch.tensor(
-        df.values.astype(np.float32),
+        df.iloc[:, :-1].values.astype(np.float32),
     ))
     dataloader = DataLoader(dataset, batch_size=df.shape[0], shuffle=False)
 
