@@ -8,12 +8,12 @@ from app.models.baf import generate as generate_module
 router = APIRouter()
 
 
-@router.post(
+@router.get(
     "/get_data",
     response_class=StreamingResponse,
 )
 async def generate_router(
-        frac: float = Query(gt=0.),
+        frac: int = Query(gt=0),
 ) -> StreamingResponse:
     df = generate_module.run_model(frac)
     stream = io.StringIO()

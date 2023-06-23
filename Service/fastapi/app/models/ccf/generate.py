@@ -40,7 +40,6 @@ qt_model = None
 generator_ccf.to(DEVICE)
 
 def frac_gen(frac):
-    frac = int(frac*100)
     f = frac * 1000
     n = 100000 - f
     y_1 = np.random.randint(low=0, high=1, size=n)
